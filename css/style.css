@@ -1,5 +1,32 @@
 #map{
-    width: 500px;
-    height: 400px;
+    width: 100%;
+    height: 80%;
     background-color: #CCC;
+}
+.map-cls{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.cls-menu{
+    padding-top: 5px;
+}
+.navbar-default{
+    font-weight: bold;
+    background-color: rgba(191,212,209,1);
+    border-radius: 0px;
+}
+.footer{
+    background-color: black;
+    color: white;
+    margin-top: 18px;
+}
+.cls-left{
+    text-align: left;
+    color: white;
+    padding: 5px;
+}
+.cls-right{
+    text-align: right;
+    color: white;
+    padding: 5px;
 }

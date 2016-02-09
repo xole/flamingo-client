@@ -4,6 +4,8 @@
         <title>AAE</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
         <link href="css/style.css" rel="stylesheet" type="text/css"/> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     </head>
     <body>
         <div class="container-fluid">
@@ -26,30 +28,50 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
                                     <li class="active"><a href="#">Live<span class="sr-only"></span></a></li>
-                                    <li><a href="#">Statistika</a></li>
+                                    <li><a href="statistics.php">Statistika</a></li>
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shiko Gjendjen e trafikut<span class="caret"></span></a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shiko Gjendjen e Trafikut <span class="caret"></span></a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">Trafiku ne oret e Fundit</a></li>
-                                            <li><a href="#">Trafiku ne ditet e Fundit</a></li>
+                                            <li><a href="#">Oret e Fundit</a></li>
+                                            <li><a href="#">Ditet e Fundit</a></li>
                                         </ul>
                                     </li>
+                                    <li><a href="contact-form.php">Kontakt<span class="sr-only"></span></a></li>
                                 </ul>
-                                <form class="navbar-form navbar-left" role="search">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Search">
-                                    </div>
-                                    <button type="submit" class="btn btn-default">Kerko</button>
-                                </form>
                             </div>
                         </div>
                     </nav>
-                </div>
+                </div>  
             </div>
             <!--Harta -->
-            <div class="row">
-                <div class="col-md-12">
-                     <div id="map"></div>
+            <div class="container-fluid map-cls">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="map"></div>
+                        <script>
+                            function initMap() {
+                                var mapDiv = document.getElementById('map');
+                                var map = new google.maps.Map(mapDiv, {
+                                    center: {lat: 41.323887, lng: 19.821599},
+                                    zoom: 8
+                                });
+                            }
+                        </script>
+                        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+                        async defer></script>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="container-fluid">
+                    <div class="col-md-12">
+                        <div class="col-md-6 cls-left">
+                            <p>Created By Flamingo &nbsp;<i class="fa fa-diamond"></i></p>
+                        </div>
+                        <div class="col-md-6 cls-right">
+                            <p>  February 2016 &nbsp;<i class="fa fa-car"></i></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
